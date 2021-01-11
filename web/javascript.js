@@ -1,3 +1,3 @@
 function click(){
-    print("Clicked!")
+    alert("Clicked!");
 }
