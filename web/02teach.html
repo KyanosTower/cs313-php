@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet.css">
     <script src="javascript.js"></script>
     <title>Week 2 Team Activity BUT Without A Team</title>
 </head>
 
 <body>
     <div id="div1" style="background-color: antiquewhite; font-size: medium;">
-            This is div one
+            <p>This is div one</p>
     </div>
-    <div id="div2" style="font-size: small; background-color: burlywood;">
-            This is div two
+    <div id="div2"  style="font-size: small; background-color: burlywood;">
+            <p>This is div two</p>
     </div>
     <div id="div3" style="background-color: cornsilk; font-size: x-small;">
-            And this is div three, my favorite.
+            <p>And this is div three, my favorite.</p>
     </div>
-    <input id="clickMe" type="button" value="Click Me" onclick="click();"/>
+    <button id="clickMe" onclick="clickMe();">Click Me</button>
+    
+    <p>Would you like to change the background color of the first line?</p>
+    <input type="text" id="textColor"/>
+    <button id="colorChanger" onclick="changeColor();">Change Color</button>
 
 </body>
 
