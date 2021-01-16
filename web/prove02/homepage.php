@@ -20,18 +20,15 @@
         <a href="assignments.html">View assignments</a>
     </header>
     <?php 
-    echo "The time is " . date("h.i.sa");
+        echo "The time is " . date("h.i.sa");
     ?>
     <p id="stupid">Would you like to see something that defines this website? If so, click the button!</p>
-    <img src="thisisawebsite.png"
-        alt="An image from homestarrunner.com depicting Homestar Runner saying 'This is a website'." id="stupidImage">
+    <img src="thisisawebsite.png" alt="An image from homestarrunner.com depicting Homestar Runner saying 'This is a website'." id="stupidImage">
     <p><button id="vizButton" onclick="viz();">Click Here!</button></p>
     <p>Is this webpage professional? Does it seem weird? The answer to these questions is simple.</p>
     <p><button id="pain" onclick="viz2();">Click here to find out!</button></p>
     <div id="glitter">
-        <a href="https://picasion.com/gl/dZgs/"><img src="https://i.picasion.com/gl/90/dZgs.gif" width="463" height="39"
-                border="0" alt="https://picasion.com/gl/dZgs/" /></a><br /><a
-            href="https://picasion.com/gl/dZgs/">https://picasion.com/gl/dZgs/</a>
+    <a href="https://picasion.com/gl/dZgs/"><img src="https://i.picasion.com/gl/90/dZgs.gif" width="463" height="39" border="0" alt="https://picasion.com/gl/dZgs/" /></a><br /><a href="https://picasion.com/gl/dZgs/">https://picasion.com/gl/dZgs/</a>
     </div>
     <footer>
         <h1><a id="theend">THANKS FOR VISITING</a></h1>
