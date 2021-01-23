@@ -33,6 +33,7 @@ session_start();
     if ($_GET["box3"] == "A used copy of The Elder Scrolls: Morrowind") {
         $_SESSION["cart3"] = "A used copy of The Elder Scrolls: Morrowind";
     }
+    $_SESSION["test"] = "testing";
     print_r($_SESSION);
     ?>
 </body>
