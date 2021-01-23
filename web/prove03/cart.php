@@ -1,0 +1,27 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<body>
+    <p>You have the following items in your cart.</p>
+    <?php
+    if ($_GET['box1'] == 'Ditto Plush'){
+       echo $_GET['box1'];
+    }
+    if ($_GET['box2'] == 'Dice'){
+        echo $_GET['box2'];
+    }
+    if ($_GET['box3'] == 'A used copy of The Elder Scrolls: Morrowind'){
+        echo $_GET['box3'];
+    }
+    ?>
+    <p>Did you change your mind? Remove stuff.</p>
+    Ditto Plush
+    <input type="checkbox" name="uncheck1" value="noDitto"/>
+    <br>Dice
+    <input type="checkbox" name="uncheck2" value="noDice"/>
+    <br>A used copy of The Elder Scrolls: Morrowind
+    <input type="checkbox" name="uncheck3" value="noMorrowind"/>
+</body>
+</html>
