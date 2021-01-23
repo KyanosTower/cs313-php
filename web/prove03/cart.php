@@ -1,5 +1,7 @@
 <?php
-if (!isset($_SESSION)) { session_start(); }
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 echo '<!doctype html>
 <html lang="en">
@@ -12,38 +14,38 @@ echo '<!doctype html>
 <body>';
 
 echo 'Your Cart Contains:<br><br>';
-if(isset($_SESSION['Ditto'])){
-  echo $_SESSION["Ditto"];
-  echo "<form action='' method='post' id='DittoForm'>
+if (isset($_SESSION['Ditto'])) {
+    echo $_SESSION["Ditto"];
+    echo "<form action='' method='post' id='DittoForm'>
   <input type='hidden' value='Ditto' name='Ditto'>
   <button class='btn' type='submit' form='DittoForm' value='Ditto'>Remove from cart</button>
   </form>";
-  if(isset($_POST['Ditto'])){
-    unset($_SESSION['Ditto']);
-    echo "<meta http-equiv='refresh' content='0'>";
+    if (isset($_POST['Ditto'])) {
+        unset($_SESSION['Ditto']);
+        echo "<meta http-equiv='refresh' content='0'>";
+    }
 }
-}
-if(isset($_SESSION['Dice'])){
-  echo $_SESSION["Dice"];
-  echo "<form action='' method='post' id='DiceForm'>
+if (isset($_SESSION['Dice'])) {
+    echo $_SESSION["Dice"];
+    echo "<form action='' method='post' id='DiceForm'>
   <input type='hidden' value='Dice' name='Dice'>
   <button class='btn' type='submit' form='DiceForm' value='Dice'>Remove from cart</button>
   </form>";
-  if(isset($_POST['Dice'])){
-    unset($_SESSION['Dice']);
-    echo "<meta http-equiv='refresh' content='0'>";
-  }
+    if (isset($_POST['Dice'])) {
+        unset($_SESSION['Dice']);
+        echo "<meta http-equiv='refresh' content='0'>";
+    }
 }
-if(isset($_SESSION['Morrowind'])){
-  echo $_SESSION['Morrowind'];
-  echo "<form action='' method='post' id='MorrowindForm'>
+if (isset($_SESSION['Morrowind'])) {
+    echo $_SESSION['Morrowind'];
+    echo "<form action='' method='post' id='MorrowindForm'>
   <input type='hidden' value='Sting' name='Morrowind'>
   <button class='btn' type='submit' form='MorrowindForm' value='Morrowind'>Remove from cart</button>
   </form>";
-  if(isset($_POST['Morrowind'])){
-    unset($_SESSION['Morrowind']);
-    echo "<meta http-equiv='refresh' content='0'>";
-  }
+    if (isset($_POST['Morrowind'])) {
+        unset($_SESSION['Morrowind']);
+        echo "<meta http-equiv='refresh' content='0'>";
+    }
 }
 
 echo '<br>' . '<a href="browse.php">Store</a>';

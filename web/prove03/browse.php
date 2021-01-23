@@ -38,6 +38,7 @@ if (!isset($_SESSION)) {
                     <button class='btn' type='submit' form='MorrowindForm'>Add to cart</button>
                 </form>
             </div>
+            <br>
             <span class="float-right">
                 <form action="cart.php" method='GET'>
                     <input type="submit" value="Cart" class='btn-success' />
