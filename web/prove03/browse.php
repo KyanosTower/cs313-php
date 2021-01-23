@@ -10,8 +10,8 @@ session_start();
 <body>
     <h1>All items are $15. Not a cent more, not a cent less. It's $15. Choose.</h1>
     <form action="" method="POST" id="ditto">
-        Ditto Plush
-        <input type="checkbox" id="box1" form="DittoForm" />
+        <input type="hidden" value="Ditto Plush" name="box1">
+        <button type="submit" class="btn" form="DittoForm">Add to Cart</button>
     </form>
     <form action="" method="POST" id="Dice">
         Dice
