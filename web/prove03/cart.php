@@ -8,13 +8,13 @@ session_start();
     <p>You have the following items in your cart.</p>
     <?php
     if ($_GET['box1'] == "Ditto Plush") {
-        echo $_GET['box1'];
+        echo $_GET['cart1'];
     }
     if ($_GET['box2'] == "Dice") {
-        echo $_GET['box2'];
+        echo $_GET['cart2'];
     }
     if ($_GET['box3'] == "A used copy of The Elder Scrolls: Morrowind") {
-        echo $_GET['box3'];
+        echo $_GET['cart3'];
     }
     ?>
     <p>Did you change your mind? Remove stuff.</p>
