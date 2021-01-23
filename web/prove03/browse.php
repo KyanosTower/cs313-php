@@ -1,48 +1,60 @@
 <?php
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 ?>
-<!DOCTYPE html>
+
+<!doctype html>
+<html lang="en">
 
 <head>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Store</title>
 </head>
 
 <body>
-    <h1>All items are $15. Not a cent more, not a cent less. It's $15. Choose.</h1>
-    <form action="" method="POST" id="ditto">
-        <p>Ditto Plush</p>
-        <input type="hidden" value="Ditto Plush" name="box1">
-        <button type="submit" class="btn" form="DittoForm">Add to Cart</button>
-    </form>
-    <form action="" method="POST" id="Dice">
-        Dice
-        <input type="checkbox" name="box2" form="DiceForm" />
-    </form>
-    <form action="" method="POST" id="morrowind">
-        A used copy of The Elder Scrolls: Morrowind
-        <input type="checkbox" name="box3" form="MorrowindForm" />
-    </form>
-    <br>
-    <a href="cart.php">Check Cart</a>
-    <br>
-    <a href="checkout.php">Checkout</a>
-    <?php
-    if (isset($_POST['box1'])) {
-        $_SESSION["cart1"] = $_POST['box1'];
-    }
-    if (isset($_POST['box2'])) {
-        $_SESSION["cart2"] = $_POST['box2'];
-    }
-    if (isset($_POST['box3'])) {
-        $_SESSION['cart3'] = $_POST['box3'];
-    }
-    /*if (isset($_POST['OrcArmor'])) {
-            $_SESSION['OrcArmor'] = $_POST['OrcArmor'];
-        }
-        if (isset($_POST['LegoGandalf'])) {
-            $_SESSION['LegoGandalf'] = $_POST['LegoGandalf'];
-        }*/
-    ?>
+    <span class="float-right">
+        <form action="cart.php" method='GET'>
+            <!-- calls the cart.php file -->
+            <input type="submit" value="Cart" class='btn-success' />
+        </form>
+    </span>
+    <h1 class="text-center">All items are $15. Not a cent more, not a cent less. It's $15. Choose.</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Ditto Plush</p>
+                <form action='' method='post' id='DittoForm'>
+                    <input type='hidden' value='ditto' name='Ditto'>
+                    <button class='btn' type='submit' form='DittoForm'>Add to cart</button>
+                </form>
+            </div>
+            <div class="col">
+                <p>Dice</p>
+                <form action='' method='post' id='DiceForm'>
+                    <input type='hidden' value='Dice' name='Dice'>
+                    <button class='btn' type='submit' form='DiceForm'>Add to cart</button>
+                </form>
+            </div>
+            <div class="col">
+                <p>A used copy of The Elder Scrolls: Morrowind</p>
+                <form action='' method='post' id='MorrowindForm'>
+                    <input type='hidden' value='Morrowind' name='Morrowind'>
+                    <button class='btn' type='submit' form='MorrowindForm'>Add to cart</button>
+                </form>
+            </div>
 </body>
 
 </html>
+<?php
+if (isset($_POST['Ditto'])) {
+    $_SESSION["Ditto"] = $_POST['Ditto'];
+}
+if (isset($_POST['Dice'])) {
+    $_SESSION["Dice"] = $_POST['Dice'];
+}
+if (isset($_POST['Morrowind'])) {
+    $_SESSION["Morrowind"] = $_POST['Morrowind'];
+}
+?>
