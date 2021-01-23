@@ -7,8 +7,8 @@ session_start();
 <body>
     <p>You have the following items in your cart.</p>
     <?php
-    if ($_GET["box1"] == "Ditto Plush") {
-        echo $_GET["cart1"];
+    if (isset($_GET['box1'])) {
+        echo "?";
     }
     if ($_GET["box2"] == "Dice") {
         echo $_GET["cart2"];

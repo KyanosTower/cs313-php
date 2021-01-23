@@ -24,17 +24,7 @@ session_start();
     <br>
     <a href="checkout.php">Checkout</a>
     <?php
-    if ($_GET["box1"] == "Ditto Plush") {
-        $_SESSION["cart1"] = "Ditto Plush";
-    }
-    if ($_GET["box2"] == "Dice") {
-        $_SESSION["cart2"] = "Dice";
-    }
-    if ($_GET["box3"] == "A used copy of The Elder Scrolls: Morrowind") {
-        $_SESSION["cart3"] = "A used copy of The Elder Scrolls: Morrowind";
-    }
-    $_SESSION["test"] = "testing";
-    print_r($_SESSION);
+    
     ?>
 </body>
 
