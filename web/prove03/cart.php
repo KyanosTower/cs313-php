@@ -24,6 +24,7 @@ session_start();
     <input type="checkbox" name="uncheck2" value="noDice" />
     <br>A used copy of The Elder Scrolls: Morrowind
     <input type="checkbox" name="uncheck3" value="noMorrowind" />
+    <a href="browse.php">Return to browse</a>
 </body>
 
 </html>
