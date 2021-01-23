@@ -14,11 +14,6 @@ if (!isset($_SESSION)) {
 </head>
 
 <body>
-    <span class="float-right">
-        <form action="cart.php" method='GET'>
-            <input type="submit" value="Cart" class='btn-success' />
-        </form>
-    </span>
     <h1 class="text-center">All items are $15. Not a cent more, not a cent less. It's $15. Choose.</h1>
     <div class="container">
         <div class="row">
@@ -43,6 +38,11 @@ if (!isset($_SESSION)) {
                     <button class='btn' type='submit' form='MorrowindForm'>Add to cart</button>
                 </form>
             </div>
+            <span class="float-right">
+                <form action="cart.php" method='GET'>
+                    <input type="submit" value="Cart" class='btn-success' />
+                </form>
+            </span>
 </body>
 
 </html>
