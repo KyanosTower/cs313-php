@@ -24,7 +24,9 @@ session_start();
     <br>
     <a href="checkout.php">Checkout</a>
     <?php
-    
+        if (isset(['box1'])){
+            $_SESSION['cart1'] = "Ditto Plush";
+        }
     ?>
 </body>
 
