@@ -16,7 +16,6 @@ if (!isset($_SESSION)) {
 <body>
     <span class="float-right">
         <form action="cart.php" method='GET'>
-            <!-- calls the cart.php file -->
             <input type="submit" value="Cart" class='btn-success' />
         </form>
     </span>
@@ -26,7 +25,7 @@ if (!isset($_SESSION)) {
             <div class="col">
                 <p>Ditto Plush</p>
                 <form action='' method='post' id='DittoForm'>
-                    <input type='hidden' value='ditto' name='Ditto'>
+                    <input type='hidden' value='Ditto' name='Ditto'>
                     <button class='btn' type='submit' form='DittoForm'>Add to cart</button>
                 </form>
             </div>
@@ -40,7 +39,7 @@ if (!isset($_SESSION)) {
             <div class="col">
                 <p>A used copy of The Elder Scrolls: Morrowind</p>
                 <form action='' method='post' id='MorrowindForm'>
-                    <input type='hidden' value='Morrowind' name='Morrowind'>
+                    <input type='hidden' value='A used copy of The Elder Scrolls: Morrowind' name='Morrowind'>
                     <button class='btn' type='submit' form='MorrowindForm'>Add to cart</button>
                 </form>
             </div>

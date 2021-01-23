@@ -46,7 +46,7 @@ if(isset($_SESSION['Morrowind'])){
   }
 }
 
-echo '<br>' . '<a href="index.php"><- Back to store</a>';
-echo '<br><br>' . '<a href="checkout.php">Checkout -></a>';
+echo '<br>' . '<a href="browse.php">Store</a>';
+echo '<br><br>' . '<a href="checkout.php">Checkout</a>';
 
 echo '</body></html>';
