@@ -12,3 +12,14 @@ CREATE TABLE geographic (
 	origin varchar(80),
 	currentLocation varchar(80)
 );
+
+INSERT INTO character
+VALUES(
+	'Maphe Lerene',
+	'Cleric",
+	5,
+	145,
+	22,
+	15
+	
+);
