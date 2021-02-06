@@ -13,6 +13,28 @@ CREATE TABLE geographic (
 	currentLocation varchar(80)
 );
 
+INSERT INTO geographic(
+	name,
+	origin,
+	currentLocation
+)
+VALUES(
+	'Maphe',
+	'Central',
+	'Capital'	
+);
+
+INSERT INTO geographic(
+	name,
+	origin,
+	currentLocation
+)
+VALUES(
+	'Bryton',
+	'South',
+	'Capital'	
+);
+
 INSERT INTO character(
 	name,
 	class,
