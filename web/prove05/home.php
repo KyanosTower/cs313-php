@@ -28,8 +28,8 @@
         die();
     }
     $statement = $db->query('SELECT name, class FROM character');
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        echo 'Name: ' . $row['name'] . ' Class: ' . $row['class'] . '<br/>';
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+        echo 'w';
     }
 
     ?>
