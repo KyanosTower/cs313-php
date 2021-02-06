@@ -13,13 +13,36 @@ CREATE TABLE geographic (
 	currentLocation varchar(80)
 );
 
-INSERT INTO character
+INSERT INTO character(
+	name,
+	class,
+	height,
+	weight,
+	age,
+	level
+)
 VALUES(
-	'Maphe Lerene',
-	'Cleric",
+	'Maphe',
+	'Cleric',
 	5,
 	145,
 	22,
 	15
-	
+);
+
+INSERT INTO character(
+	name,
+	class,
+	height,
+	weight,
+	age,
+	level
+)
+VALUES(
+	'Bryton',
+	'Rogue',
+	6,
+	150,
+	22,
+	12
 );
