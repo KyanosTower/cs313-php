@@ -35,7 +35,7 @@
             <form id="mapheH" style="visibility:hidden">
                 <?php
                     $statement = $db->query('SELECT name, class, height, weight, age, level FROM character');
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+                    while ($row['name'] == 'Maphe')
                     {
                       echo 'Name: ' . $row['name'] . '<br/>'; 
                       echo 'Class: ' . $row['class'] . '<br/>';
