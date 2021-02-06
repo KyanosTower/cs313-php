@@ -27,12 +27,11 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
     }
-    foreach ($db->query('SELECT name, class FROM character') as $row) {
-        echo 'Name: ' . $row['name'];
-        echo 'Class: ' . $row['class'];
-        echo '<br/>';
+    $statement = $db->query('SELECT name, class FROM character');
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        echo 'Name: ' . $row['name'] . ' Class: ' . $row['class'] . '<br/>';
     }
-    echo '???';
+
     ?>
 </body>
 
