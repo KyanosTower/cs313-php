@@ -29,15 +29,10 @@ try {
 </head>
 
 <body style="text-align: center;">
-    <h1>Input a name.</h1>
-    <form id="getInput" action="" method="GET">
-        <input type="text" name="nameInput" id="nameInput" value='<?php echo $name; ?>' />
-        <!--<input type="submit" name="submit" value="Submit" onclick="displayView()"/>-->
-    </form>
-    <button name="notHidden" onclick="displayView()">Search</button>
-    <form id="displayData" style="visibility:hidden">
+    <h1>Look, data.</h1>
+    <form id="displayData">
         <?php
-        $name = $_GET['nameInput'];
+        $name = $_POST['name'];
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
         $statement->bindValue(':name', $name);
         $statement->execute();
