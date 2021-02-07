@@ -28,28 +28,12 @@ try {
 </head>
 
 <body style="text-align: center;">
-    <h1>You have two options, pick one.</h1>
-    <button id="buttonM" onclick="mapheButton()">Maphe</button>
+    <h1>Wow, data.</h1>
     <form id="mapheH" style="visibility:hidden">
         <?php
+        $name = $_POST['name'];
         $statement = $db->prepare('SELECT name, class, height, weight, age, level FROM character WHERE name = :name');
-        $statement->bindValue(':name', 'Maphe');
-        $statement->execute();
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            echo 'Name: ' . $row['name'] . '<br/>';
-            echo 'Class: ' . $row['class'] . '<br/>';
-            echo 'Height (ft): ' . $row['height'] . '<br/>';
-            echo 'Weight (lbs): ' . $row['weight'] . '<br/>';
-            echo 'Age: ' . $row['age'] . '<br/>';
-            echo 'Level: ' . $row['level'];
-        }
-        ?>
-    </form>
-    <button id="buttonB" onclick="brytonButton()">Bryton</button>
-    <form id="brytonH" style="visibility:hidden">
-        <?php
-        $statement = $db->prepare('SELECT name, class, height, weight, age, level FROM character WHERE name = :name');
-        $statement->bindValue(':name', 'Bryton');
+        $statement->bindValue(':name', $name);
         $statement->execute();
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             echo 'Name: ' . $row['name'] . '<br/>';
