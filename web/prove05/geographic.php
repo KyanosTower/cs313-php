@@ -32,14 +32,12 @@ try {
     <h1>Input a name.</h1>
     <form id="getInput" action="" method="GET">
         <input type="text" name="nameInput" id="nameInput" value='<?php echo $name; ?>' />
-        <input type="submit" name="submit" value="Submit" onclick="displayView()"/>
+        <!--<input type="submit" name="submit" value="Submit" onclick="displayView()"/>-->
     </form>
     <button name="notHidden" onclick="displayView()">Search</button>
     <form id="displayData" style="visibility:hidden">
         <?php
-        if(isset($_GET['submit'])){
-            $name = $_GET['nameInput'];
-        }
+        $name = $_GET['nameInput'];
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
         $statement->bindValue(':name', $name);
         $statement->execute();
