@@ -34,8 +34,9 @@
         <button id = "buttonM" onclick="mapheButton()">Maphe</button>
             <form id="mapheH" style="visibility:hidden">
                 <?php
-                    $sql = 'SELECT name, class, height, weight, age, level FROM character WHERE name=Maphe ORDER BY name';
-                    $statement = $db->query($sql); 
+                    $statement = $db->prepare('SELECT name, class, height, weight, age, level FROM character WHERE name = :name');
+                    $statement->bindValue(':name', 'Maphe'); 
+                    $statement->execute();
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                     {
                       echo 'Name: ' . $row['name'] . '<br/>'; 
