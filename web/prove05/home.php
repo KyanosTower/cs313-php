@@ -19,7 +19,9 @@
         <input type="text" name="name" value="For geographic, enter here." />
         <input type="submit" />
     </form>
-
+<footer>
+    <a href="https://dry-depths-02343.herokuapp.com/prove02/assignments.html">Return to assignments page</a>
+</footer>
 </body>
 
 </html>
