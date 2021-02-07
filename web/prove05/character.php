@@ -28,7 +28,7 @@ try {
 </head>
 
 <body style="text-align: center;">
-<a href="https://picasion.com/gl/e7Ao/"><img src="https://i.picasion.com/gl/90/e7Ao.gif" width="266" height="42" border="0" alt="https://picasion.com/gl/e7Ao/" /></a><br /><a href="https://picasion.com/gl/e7Ao/">https://picasion.com/gl/e7Ao/</a>
+    <a href="https://picasion.com/gl/e7Ao/"><img src="https://i.picasion.com/gl/90/e7Ao.gif" width="266" height="42" border="0" alt="https://picasion.com/gl/e7Ao/" /></a><br /><a href="https://picasion.com/gl/e7Ao/">glitter maker</a>
     <form id="mapheH">
         <?php
         $name = $_POST['name'];
