@@ -36,8 +36,9 @@ try {
     <button name="notHidden" onclick="displayView()">Search</button>
     <form id="display" style="visibility:hidden">
         <?php
+        $name = $_GET['nameInput'];
         $statement = $db->prepare('SELECT name, origin, currentLocation FROM geographic WHERE name = :name');
-        $statement->bindValue(':name', $_GET['nameInput']);
+        $statement->bindValue(':name', $_name);
         $statement->execute();
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             echo 'Name: ' . $row['name'] . '<br/>';
