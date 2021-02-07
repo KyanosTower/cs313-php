@@ -32,15 +32,16 @@ try {
     <h1>Input a name.</h1>
     <form id="getInput" action="" method="GET">
         <input type="text" name="nameInput" id="nameInput" value='<?php echo $name; ?>' />
+        <input type="submit" name="submit" value="Submit"/>
     </form>
     <button name="notHidden" onclick="displayView()">Search</button>
     <form id="displayData" style="visibility:hidden">
         <?php
-        if(isset($_GET['nameInput'])){
+        if(isset($_GET['submit'])){
             echo 'w';
         }
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
-        $statement->bindValue(':name', $name);
+        $statement->bindValue(':name', 'Maphe');
         $statement->execute();
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             echo 'Name: ' . $row['name'] . '<br/>';
