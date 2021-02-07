@@ -34,7 +34,7 @@ try {
         <input type="text" name="nameInput" id="nameInput" value="Enter Name" />
     </form>
     <button name="notHidden" onclick="displayView()">Search</button>
-    <form id="display" style="visibility:hidden">
+    <form id="displayData" style="visibility:hidden">
         <?php
         $name = $_GET['nameInput'];
         $statement = $db->prepare('SELECT name, origin, currentLocation FROM geographic WHERE name = :name');
