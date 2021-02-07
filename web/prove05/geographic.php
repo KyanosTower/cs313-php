@@ -38,10 +38,10 @@ try {
     <form id="displayData" style="visibility:hidden">
         <?php
         if(isset($_GET['submit'])){
-            echo 'w';
+            $name = $_GET['nameInput'];
         }
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
-        $statement->bindValue(':name', 'Maphe');
+        $statement->bindValue(':name', $name);
         $statement->execute();
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             echo 'Name: ' . $row['name'] . '<br/>';
