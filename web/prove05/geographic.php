@@ -31,7 +31,7 @@ try {
 <body style="text-align: center;">
     <h1>Input a name.</h1>
     <form id="getInput" action="" method="GET">
-        <input type="text" name="nameInput" id="nameInput" value="Enter Name" />
+        <input type="text" name="nameInput" id="nameInput" value='<?php echo $name; ?>' />
     </form>
     <button name="notHidden" onclick="displayView()">Search</button>
     <form id="displayData" style="visibility:hidden">
