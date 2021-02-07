@@ -29,7 +29,7 @@ try {
 </head>
 
 <body style="text-align: center;">
-    <h1>Look, data.</h1>
+    <a href="https://picasion.com/gl/e7Ap/"><img src="https://i.picasion.com/gl/90/e7Ap.gif" width="419" height="36" border="0" alt="glitter maker" /></a><br /><a href="https://picasion.com/gl/e7Ap/">glitter maker</a>
     <form id="displayData">
         <?php
         $name = $_POST['name'];

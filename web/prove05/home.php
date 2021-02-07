@@ -7,7 +7,7 @@
 </head>
 
 <body style="text-align: center;">
-    <h1>Pick a table to look at please.</h1>
+    <a href="https://picasion.com/gl/e7As/"><img src="https://i.picasion.com/gl/90/e7As.gif" width="500" height="25" border="0" alt="glitter maker" /></a><br /><a href="https://picasion.com/gl/e7As/">glitter maker</a>
     <p>But first, enter a name.</p>
     <p>Character</p>
     <form action="character.php" method="POST">
