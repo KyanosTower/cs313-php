@@ -29,7 +29,7 @@ try {
 
 <body style="text-align: center;">
     <h1>Wow, data.</h1>
-    <form id="mapheH" style="visibility:hidden">
+    <form id="mapheH">
         <?php
         $name = $_POST['name'];
         $statement = $db->prepare('SELECT name, class, height, weight, age, level FROM character WHERE name = :name');
