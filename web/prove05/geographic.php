@@ -36,7 +36,9 @@ try {
     <button name="notHidden" onclick="displayView()">Search</button>
     <form id="displayData" style="visibility:hidden">
         <?php
-        $name = $_GET['nameInput'];
+        if(isset($_GET['nameInput'])){
+            echo 'w';
+        }
         echo $name;
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
         $statement->bindValue(':name', 'Maphe');
