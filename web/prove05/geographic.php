@@ -39,9 +39,8 @@ try {
         if(isset($_GET['nameInput'])){
             echo 'w';
         }
-        echo $name;
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
-        $statement->bindValue(':name', 'Maphe');
+        $statement->bindValue(':name', $name);
         $statement->execute();
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             echo 'Name: ' . $row['name'] . '<br/>';
