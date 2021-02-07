@@ -30,7 +30,7 @@ try {
 
 <body style="text-align: center;">
     <h1>Input a name.</h1>
-    <form id="getInput" action="" method="get">
+    <form id="getInput" action="" method="GET">
         <input type="text" name="nameInput" id="nameInput" value="Enter Name" />
     </form>
     <button name="notHidden" onclick="displayView()">Search</button>
