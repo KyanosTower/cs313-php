@@ -37,13 +37,14 @@ try {
     <form id="displayData" style="visibility:hidden">
         <?php
         $name = $_GET['nameInput'];
-        $statement = $db->prepare('SELECT name, origin, currentLocation FROM geographic WHERE name = :name');
+        echo $name;
+        $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
         $statement->bindValue(':name', 'Maphe');
         $statement->execute();
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             echo 'Name: ' . $row['name'] . '<br/>';
             echo 'Origin: ' . $row['origin'] . '<br/>';
-            echo 'Current Location: ' . $row['currentLocation'];
+            echo 'Current Location: ' . $row['currentlocation'];
         }
         ?>
     </form>
