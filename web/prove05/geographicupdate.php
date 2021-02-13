@@ -35,19 +35,19 @@ try {
         $row = $_POST['row'];
         $change = $_POST['change'];
         $name = $_POST['nameUpdate'];
-        if ($row == 'origin') {
+        if ($row == 'origin' || $row == 'Origin') {
             $statementUpdate = $db->prepare('UPDATE geographic SET origin=:change WHERE name=:name');
             $statementUpdate->bindValue(':change', $change);
             $statementUpdate->bindValue(':name', $name);
             $statementUpdate->execute();
         }
-        if ($row =='currentLocation') {
+        if ($row =='currentLocation' || $row == 'Current Location' || $row == 'current location') {
             $statementUpdate = $db->prepare('UPDATE geographic SET currentLocation=:change WHERE name=:name');
             $statementUpdate->bindValue(':change', $change);
             $statementUpdate->bindValue(':name', $name);
             $statementUpdate->execute();
         }
-        if ($row == 'name') {
+        if ($row == 'name' || $row == 'Name') {
             $statementUpdate = $db->prepare('UPDATE geographic SET name=:change WHERE name=:name');
             $statementUpdate->bindValue(':change', $change);
             $statementUpdate->bindValue(':name', $name);
