@@ -45,7 +45,7 @@
     </form>
     <button id="geographicUpdate" onclick="displayGeographicUpdate()">To update data on the Geographic table, click here.</button>
     <form action="geographicupdate.php" method="POST" id="geographicUpdateForm" style="visibility: hidden;">
-        <p>What row do you want to change?</p>
+        <p>What row do you want to change? (Lowercase please)</p>
         <input type="text" name="row" value="Enter the row you want to change"/>
         <p>What do you want to change it to?</p>
         <input type="text" name="change" value="Enter the new value"/>
