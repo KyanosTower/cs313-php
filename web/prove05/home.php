@@ -20,21 +20,27 @@
         <input type="text" name="name" value="For geographic, enter here." />
         <input type="submit" />
     </form>
+    <br>
     <button id="characterAdd" onclick="displayCharacterAdd()">Click here to Add to the Character table.</button>
     <form action="characteradd.php" method="POST" id="characterAddForm" style="visibility: hidden;">
         <input type="text" name="nameAdd" value="Enter Name"/>
         <input type="text" name="classAdd" value="Enter Class"/>
+        <br>
         <input type="text" name="heightAdd" value="Enter Height (ft, no inches)"/>
         <input type="text" name="weightAdd" value="Enter Weight (lbs)"/>
+        <br>
         <input type="text" name="ageAdd" value="Enter Age"/>
         <input type="text" name="levelAdd" value="Enter Level"/>
+        <br>
         <input type="submit"/>
     </form>
     <button id="geographicAdd" onclick="displayGeographicAdd()">To add data to the Geographic table, click here.</button>
     <form action="geographicadd.php" method="POST" id="geographicAddForm" style="visibility: hidden;">
         <input type="text" name="nameAdd" value="Enter Name"/>
         <input type="text" name="originAdd" value="Enter Origin"/>
+        <br>
         <input type="text" name="currentLocationAdd" value="Enter Current Location"/>
+        <br>
         <input type="submit"/>
     </form>
 <footer>
