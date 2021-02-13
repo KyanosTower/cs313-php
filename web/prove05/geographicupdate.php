@@ -73,13 +73,13 @@ try {
             $statementUpdate->bindValue(':name', $name);
             $statementUpdate->execute();
 
-            $statementGet = $db->prepare('SELECT origin, currentLocation FROM geographic WHERE name=:name');
+            $statementGet = $db->prepare('SELECT origin, currentlocation FROM geographic WHERE name=:name');
             $statementGet->bindValue(':name', $change);
             $statementGet->execute();
             $row = $statementGet->fetch(PDO::FETCH_ASSOC);
             $origin = $row['origin'];
-            $currentLocation = $row['currentLocation'];
-            echo $name;
+            $currentLocation = $row['currentlocation'];
+            echo $change;
             echo $origin;
             echo $currentLocation;
 
