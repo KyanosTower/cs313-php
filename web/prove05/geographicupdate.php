@@ -35,11 +35,12 @@ try {
         $row = $_POST['row'];
         $change = $_POST['change'];
         $name = $_POST['nameUpdate'];
-        $statementInsert = $db->prepare('UPDATE geographic SET :row=:change WHERE name=:name');
-        $statementInsert->bindValue(':name', $name);
-        $statementInsert->bindValue(':row', $row);
-        $statementInsert->bindValue(':change', $change);
-        $statementInsert->execute();
+        $statementUpdate = $db->prepare('UPDATE geographic SET :row=:change WHERE name=:name');
+        $statementUpdate->bindValue(':row', $row);
+        $statementUpdate->bindValue(':change', $change);
+        $statementUpdate->bindValue(':name', $name);
+        $statementUpdate->execute();
+        echo "w";
         echo "Values are now:";
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
         $statement->bindValue(':name', $name);
