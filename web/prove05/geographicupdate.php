@@ -78,6 +78,9 @@ try {
             $statementGet->execute();
             $row = $statementGet->fetch(PDO::FETCH_ASSOC);
             $origin = $row['origin'];
+            echo $name;
+            echo $origin;
+            echo $currentLocation;
             $currentLocation = $row['currentLocation'];
 
             echo "Values are now:";
