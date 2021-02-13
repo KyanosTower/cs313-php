@@ -61,12 +61,10 @@ try {
         $statementInsert->bindValue(':age', $age);
         $statementInsert->bindValue(':level', $level);
         $statementInsert->execute();
-        echo "w";
         echo "Values added are:";
         $statement = $db->prepare('SELECT name, class, height, weight, age, level FROM character WHERE name = :name');
         $statement->bindValue(':name', $name);
         $statement->execute();
-        echo "w";
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
             echo 'Class: ' . $row['class'] . '<br/>';
