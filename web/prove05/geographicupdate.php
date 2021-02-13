@@ -53,6 +53,7 @@ try {
             $statementUpdate->bindValue(':name', $name);
             $statementUpdate->execute();
         }
+
         echo "Values are now:";
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
         $statement->bindValue(':name', $name);
