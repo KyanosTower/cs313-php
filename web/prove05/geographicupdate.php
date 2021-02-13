@@ -40,28 +40,55 @@ try {
             $statementUpdate->bindValue(':change', $change);
             $statementUpdate->bindValue(':name', $name);
             $statementUpdate->execute();
+
+            echo "Values are now:";
+            $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
+            $statement->bindValue(':name', $name);
+            $statement->execute();
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
+                echo 'Origin: ' . $row['origin'] . '<br/>';
+                echo 'Current Location: ' . $row['currentlocation'];
+            }
         }
-        if ($row =='currentLocation' || $row == 'Current Location' || $row == 'current location') {
+        if ($row == 'currentLocation' || $row == 'Current Location' || $row == 'current location') {
             $statementUpdate = $db->prepare('UPDATE geographic SET currentLocation=:change WHERE name=:name');
             $statementUpdate->bindValue(':change', $change);
             $statementUpdate->bindValue(':name', $name);
             $statementUpdate->execute();
+
+            echo "Values are now:";
+            $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
+            $statement->bindValue(':name', $name);
+            $statement->execute();
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
+                echo 'Origin: ' . $row['origin'] . '<br/>';
+                echo 'Current Location: ' . $row['currentlocation'];
+            }
         }
         if ($row == 'name' || $row == 'Name') {
             $statementUpdate = $db->prepare('UPDATE geographic SET name=:change WHERE name=:name');
             $statementUpdate->bindValue(':change', $change);
             $statementUpdate->bindValue(':name', $name);
             $statementUpdate->execute();
-        }
 
-        echo "Values are now:";
-        $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
-        $statement->bindValue(':name', $name);
-        $statement->execute();
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
-            echo 'Origin: ' . $row['origin'] . '<br/>';
-            echo 'Current Location: ' . $row['currentlocation'];
+            $statementGet = $db->prepare('SELECT origin, currentlocation FROM geographic WHERE name=:name');
+            $statementGet->bindValue(':name', $name);
+            $row = $statementGet->fetch(PDO::FETCH_ASSOC);
+            $origin = $row['origin'];
+            $currentLocation = $row['currentLocation'];
+
+            echo "Values are now:";
+            $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE currentLocation=:currentLocation AND origin=:origin');
+            $statement->bindValue(':origin', $origin);
+            $statement->bindValue(':currentLocation', $currentLocation);
+            $statement->execute();
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
+                echo 'Origin: ' . $row['origin'] . '<br/>';
+                echo 'Current Location: ' . $row['currentlocation'];
+            }
         }
         ?>
     </form>
