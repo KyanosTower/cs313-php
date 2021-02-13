@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="javascript.js"></script>
     <title>Homepage</title>
 </head>
 
@@ -18,6 +19,21 @@
     <form action="geographic.php" method="POST">
         <input type="text" name="name" value="For geographic, enter here." />
         <input type="submit" />
+    </form>
+    <button id="characterAdd" onclick="displayCharacterAdd()">Click here to Add to the Character table.</button>
+    <form action="characteradd.php" method="POST" id="characterAddForm" style="visibility: hidden;">
+        <input type="text" name="nameAdd" value="Enter Name"/>
+        <input type="text" name="classAdd" value="Enter Class"/>
+        <input type="text" name="heightAdd" value="Enter Height (ft, no inches)"/>
+        <input type="text" name="weightAdd" value="Enter Weight (lbs)"/>
+        <input type="text" name="ageAdd" value="Enter Age"/>
+        <input type="text" name="levelAdd" value="Enter Level"/>
+    </form>
+    <button id="geographicAdd" onclick="displayGeographicAdd()">To add data to the Geographic table, click here.</button>
+    <form action="geographicadd.php" method="POST" id="geographicAddForm" style="visibility: hidden;">
+        <input type="text" name="nameAdd" value="Enter Name"/>
+        <input type="text" name="originAdd" value="Enter Origin"/>
+        <input type="text" name="currentLocationAdd" value="Enter Current Location"/>
     </form>
 <footer>
     <a href="https://dry-depths-02343.herokuapp.com/prove02/assignments.html">Return to assignments page</a>

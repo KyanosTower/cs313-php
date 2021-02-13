@@ -8,3 +8,11 @@ function brytonButton(){
 function displayView(){
     document.getElementById("displayData").style.visibility = 'visible';
 }
+
+function displayCharacterAdd(){
+    document.getElementById("characterAddForm").style.visibility = 'visible';
+}
+
+function displayGeographicAdd(){
+    document.getElementById("geographicAddForm").style.visibility = 'visible';
+}
