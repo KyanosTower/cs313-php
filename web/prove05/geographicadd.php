@@ -35,7 +35,9 @@ try {
         $name = $_POST['nameAdd'];
         $origin = $_POST['originAdd'];
         $currentLocation = $_POST['currentLocationAdd'];
+        echo "w";
         $statementInsert = $db->prepare('INSERT INTO geographic (name, origin, currentLocation) VALUES (:name, :origin, :currentLocation)');
+        echo "w";
         $statement->bindValue(':name', $name);
         $statement->bindValue(':origin', $origin);
         $statement->bindValue(':name', $currentLocation);
