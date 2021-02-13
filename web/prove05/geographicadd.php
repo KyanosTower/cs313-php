@@ -38,9 +38,9 @@ try {
         echo "w";
         $statementInsert = $db->prepare('INSERT INTO geographic (name, origin, currentLocation) VALUES (:name, :origin, :currentLocation)');
         echo "w";
-        $statement->bindValue(':name', $name);
-        $statement->bindValue(':origin', $origin);
-        $statement->bindValue(':name', $currentLocation);
+        $statementInsert->bindValue(':name', $name);
+        $statementInsert->bindValue(':origin', $origin);
+        $statementInsert->bindValue(':name', $currentLocation);
         echo "w";
         $statementInsert->execute();
         echo "Values added are:";
