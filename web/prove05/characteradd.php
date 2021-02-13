@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <?php
 try {
     $dbUrl = getenv('DATABASE_URL');
@@ -28,15 +29,46 @@ try {
 </head>
 
 <body style="text-align: center;">
-    <a href="https://picasion.com/gl/e7Ao/"><img src="https://i.picasion.com/gl/90/e7Ao.gif" width="266" height="42" border="0" alt="https://picasion.com/gl/e7Ao/" /></a><br /><a href="https://picasion.com/gl/e7Ao/">glitter maker</a>
-    <form id="mapheH">
+    <a href="https://picasion.com/gl/e7Ap/"><img src="https://i.picasion.com/gl/90/e7Ap.gif" width="419" height="36" border="0" alt="glitter maker" /></a><br /><a href="https://picasion.com/gl/e7Ap/">glitter maker</a>
+    <form id="displayData">
         <?php
-        $name = $_POST['name'];
+        $name = $_POST['nameAdd'];
+        $class = $_POST['classAdd'];
+        $height = $_POST['heightAdd'];
+        $weight = $_POST['weightAdd'];
+        $age = $_POST['ageAdd'];
+        $level = $_POST['levelAdd'];
+        $statementInsert = $db->prepare('INSERT INTO character(
+            name,
+            class,
+            height,
+            weight,
+            age,
+            level
+        )
+        VALUES(
+            :name,
+            :class,
+            :height,
+            :weight,
+            :age,
+            :level	
+        )');
+        $statementInsert->bindValue(':name', $name);
+        $statementInsert->bindValue(':class', $class);
+        $statementInsert->bindValue(':height', $height);
+        $statementInsert->bindValue(':weight', $weight);
+        $statementInsert->bindValue(':age', $age);
+        $statementInsert->bindValue(':level', $level);
+        $statementInsert->execute();
+        echo "w";
+        echo "Values added are:";
         $statement = $db->prepare('SELECT name, class, height, weight, age, level FROM character WHERE name = :name');
         $statement->bindValue(':name', $name);
         $statement->execute();
+        echo "w";
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            echo 'Name: ' . $row['name'] . '<br/>';
+            echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
             echo 'Class: ' . $row['class'] . '<br/>';
             echo 'Height (ft): ' . $row['height'] . '<br/>';
             echo 'Weight (lbs): ' . $row['weight'] . '<br/>';
