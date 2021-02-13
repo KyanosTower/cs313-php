@@ -50,7 +50,7 @@
         <p>What do you want to change it to?</p>
         <input type="text" name="change" value="Enter the new value"/>
         <p>Who do you want to change it for?</p>
-        <input type="text" name="nameUpdate" value="Enter the name of the character."
+        <input type="text" name="nameUpdate" value="Enter the name of the character."/>
         <input type="submit"/>
     </form>
 <footer>
