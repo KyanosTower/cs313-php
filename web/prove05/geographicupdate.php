@@ -75,6 +75,7 @@ try {
 
             $statementGet = $db->prepare('SELECT origin, currentlocation FROM geographic WHERE name=:name');
             $statementGet->bindValue(':name', $name);
+            $statementGet->execute();
             $row = $statementGet->fetch(PDO::FETCH_ASSOC);
             $origin = $row['origin'];
             $currentLocation = $row['currentLocation'];
