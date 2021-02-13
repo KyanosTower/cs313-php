@@ -35,13 +35,11 @@ try {
         $name = $_POST['nameAdd'];
         $origin = $_POST['originAdd'];
         $currentLocation = $_POST['currentLocationAdd'];
-        echo "w";
-        $statementInsert = $db->prepare('INSERT INTO geographic (name, origin, currentLocation) VALUES (:name, :origin, :currentLocation)');
-        echo "w";
+        echo $name;
+        $statementInsert = $db->prepare('INSERT INTO geographic VALUES (:name, :origin, :currentLocation)');
         $statementInsert->bindValue(':name', $name);
         $statementInsert->bindValue(':origin', $origin);
         $statementInsert->bindValue(':name', $currentLocation);
-        echo "w";
         $statementInsert->execute();
         echo "Values added are:";
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
