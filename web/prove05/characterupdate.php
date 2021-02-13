@@ -46,7 +46,7 @@ try {
             $statement->bindValue(':name', $name);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                echo 'Name: ' . $row['name'] . '<br/>';
+                echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
                 echo 'Class: ' . $row['class'] . '<br/>';
                 echo 'Height (ft): ' . $row['height'] . '<br/>';
                 echo 'Weight (lbs): ' . $row['weight'] . '<br/>';
@@ -65,7 +65,7 @@ try {
             $statement->bindValue(':name', $name);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                echo 'Name: ' . $row['name'] . '<br/>';
+                echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
                 echo 'Class: ' . $row['class'] . '<br/>';
                 echo 'Height (ft): ' . $row['height'] . '<br/>';
                 echo 'Weight (lbs): ' . $row['weight'] . '<br/>';
@@ -84,7 +84,7 @@ try {
             $statement->bindValue(':name', $name);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                echo 'Name: ' . $row['name'] . '<br/>';
+                echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
                 echo 'Class: ' . $row['class'] . '<br/>';
                 echo 'Height (ft): ' . $row['height'] . '<br/>';
                 echo 'Weight (lbs): ' . $row['weight'] . '<br/>';
@@ -103,7 +103,7 @@ try {
             $statement->bindValue(':name', $name);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                echo 'Name: ' . $row['name'] . '<br/>';
+                echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
                 echo 'Class: ' . $row['class'] . '<br/>';
                 echo 'Height (ft): ' . $row['height'] . '<br/>';
                 echo 'Weight (lbs): ' . $row['weight'] . '<br/>';
@@ -122,7 +122,7 @@ try {
             $statement->bindValue(':name', $name);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                echo 'Name: ' . $row['name'] . '<br/>';
+                echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
                 echo 'Class: ' . $row['class'] . '<br/>';
                 echo 'Height (ft): ' . $row['height'] . '<br/>';
                 echo 'Weight (lbs): ' . $row['weight'] . '<br/>';
@@ -149,7 +149,7 @@ try {
             $statement->bindValue(':age', $age);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                echo 'Name: ' . $row['name'] . '<br/>';
+                echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
                 echo 'Class: ' . $row['class'] . '<br/>';
                 echo 'Height (ft): ' . $row['height'] . '<br/>';
                 echo 'Weight (lbs): ' . $row['weight'] . '<br/>';
