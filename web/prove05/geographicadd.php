@@ -54,7 +54,7 @@ try {
         $statement->bindValue(':name', $name);
         $statement->execute();
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            echo 'Name: ' . $row['name'] . '<br/>';
+            echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
             echo 'Origin: ' . $row['origin'] . '<br/>';
             echo 'Current Location: ' . $row['currentlocation'];
         }
