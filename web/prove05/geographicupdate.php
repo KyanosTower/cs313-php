@@ -35,11 +35,24 @@ try {
         $row = $_POST['row'];
         $change = $_POST['change'];
         $name = $_POST['nameUpdate'];
-        $statementUpdate = $db->prepare('UPDATE geographic SET origin=:change WHERE name=:name');
-        /*$statementUpdate->bindValue(':row', $row);*/
-        $statementUpdate->bindValue(':change', $change);
-        $statementUpdate->bindValue(':name', $name);
-        $statementUpdate->execute();
+        if ($row = 'origin') {
+            $statementUpdate = $db->prepare('UPDATE geographic SET origin=:change WHERE name=:name');
+            $statementUpdate->bindValue(':change', $change);
+            $statementUpdate->bindValue(':name', $name);
+            $statementUpdate->execute();
+        }
+        if ($row = 'currentLocation') {
+            $statementUpdate = $db->prepare('UPDATE geographic SET currentLocation=:change WHERE name=:name');
+            $statementUpdate->bindValue(':change', $change);
+            $statementUpdate->bindValue(':name', $name);
+            $statementUpdate->execute();
+        }
+        if ($row = 'name') {
+            $statementUpdate = $db->prepare('UPDATE geographic SET name=:change WHERE name=:name');
+            $statementUpdate->bindValue(':change', $change);
+            $statementUpdate->bindValue(':name', $name);
+            $statementUpdate->execute();
+        }
         echo "Values are now:";
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
         $statement->bindValue(':name', $name);
