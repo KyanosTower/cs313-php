@@ -131,7 +131,7 @@ try {
             }
         }
         if ($row == 'name' || $row == 'Name') {
-            $statementUpdate = $db->prepare('UPDATE geographic SET name=:change WHERE name=:name');
+            $statementUpdate = $db->prepare('UPDATE character SET name=:change WHERE name=:name');
             $statementUpdate->bindValue(':change', $change);
             $statementUpdate->bindValue(':name', $name);
             $statementUpdate->execute();
