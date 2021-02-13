@@ -16,3 +16,7 @@ function displayCharacterAdd(){
 function displayGeographicAdd(){
     document.getElementById("geographicAddForm").style.visibility = 'visible';
 }
+
+function displayGeographicUpdate(){
+    document.getElementById("geographicUpdateForm").style.visibility = 'visible';
+}

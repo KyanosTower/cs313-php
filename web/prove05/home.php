@@ -43,6 +43,16 @@
         <br>
         <input type="submit"/>
     </form>
+    <button id="geographicUpdate" onclick="displayGeographicUpdate()">To update data on the Geographic table, click here.</button>
+    <form action="geographicupdate.php" method="POST" id="geographicUpdateForm" style="visibility: hidden;">
+        <p>What row do you want to change?</p>
+        <input type="text" name="row" value="Enter the row you want to change"/>
+        <p>What do you want to change it to?</p>
+        <input type="text" name="change" value="Enter the new value"/>
+        <p>Who do you want to change it for?</p>
+        <input type="text" name="nameUpdate" value="Enter the name of the character."
+        <input type="submit"/>
+    </form>
 <footer>
     <a href="https://dry-depths-02343.herokuapp.com/prove02/assignments.html">Return to assignments page</a>
 </footer>
