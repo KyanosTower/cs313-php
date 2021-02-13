@@ -41,6 +41,7 @@ try {
         $statement->bindValue(':name', $name);
         $statement->bindValue(':origin', $origin);
         $statement->bindValue(':name', $currentLocation);
+        echo "w";
         $statementInsert->execute();
         echo "Values added are:";
         $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE name = :name');
