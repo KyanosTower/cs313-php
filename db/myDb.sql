@@ -35,6 +35,17 @@ VALUES(
 	'Capital'	
 );
 
+INSERT INTO geographic(
+	name,
+	origin,
+	currentLocation
+)
+VALUES(
+	'Kendr',
+	'???',
+	'Jackalope'	
+);
+
 INSERT INTO character(
 	name,
 	class,
