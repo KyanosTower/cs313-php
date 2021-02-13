@@ -79,14 +79,12 @@ try {
             $row = $statementGet->fetch(PDO::FETCH_ASSOC);
             $origin = $row['origin'];
             $currentLocation = $row['currentlocation'];
-            echo $change;
-            echo $origin;
-            echo $currentLocation;
 
             echo "Values are now:";
-            $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE currentLocation=:currentLocation AND origin=:origin');
+            $statement = $db->prepare('SELECT name, origin, currentlocation FROM geographic WHERE currentLocation=:currentLocation AND origin=:origin AND name=:name');
             $statement->bindValue(':origin', $origin);
             $statement->bindValue(':currentLocation', $currentLocation);
+            $statement->bindValue(':name', $change);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 echo '<br>' . 'Name: ' . $row['name'] . '<br/>';
