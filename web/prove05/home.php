@@ -28,12 +28,14 @@
         <input type="text" name="weightAdd" value="Enter Weight (lbs)"/>
         <input type="text" name="ageAdd" value="Enter Age"/>
         <input type="text" name="levelAdd" value="Enter Level"/>
+        <input type="submit"/>
     </form>
     <button id="geographicAdd" onclick="displayGeographicAdd()">To add data to the Geographic table, click here.</button>
     <form action="geographicadd.php" method="POST" id="geographicAddForm" style="visibility: hidden;">
         <input type="text" name="nameAdd" value="Enter Name"/>
         <input type="text" name="originAdd" value="Enter Origin"/>
         <input type="text" name="currentLocationAdd" value="Enter Current Location"/>
+        <input type="submit"/>
     </form>
 <footer>
     <a href="https://dry-depths-02343.herokuapp.com/prove02/assignments.html">Return to assignments page</a>
